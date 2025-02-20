@@ -12,7 +12,6 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Built Using](#built_using)
-- [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
 Welcome to the official open-source repository of my personal portfolio website!

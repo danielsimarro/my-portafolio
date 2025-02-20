@@ -90,7 +90,7 @@ const Home = ({ secHeight, navID }: CommonProps) => {
             >
               <Image
                 alt="Daniel Simarro"
-                src="/profile-pic.png"
+                src="/assets/profile-pic.png"
                 style={{
                   width: "100%",
                   height: "100%",
