@@ -16,11 +16,11 @@
 ## 🧐 About <a name = "about"></a>
 Welcome to the official open-source repository of my personal portfolio website!
 
-🚀 Built with the latest technologies, this project is a showcase of my skills and learning journey.
-✨ Highlights some of my GitHub projects.
-📱 Fully responsive and user-friendly design.
-🌗 Supports both light and dark mode.
-📌 Includes five key sections: Home, About, Skills, Projects, and Contact.
+🚀 Built with the latest technologies, this project is a showcase of my skills and learning journey.\
+✨ Highlights some of my GitHub projects.\
+📱 Fully responsive and user-friendly design.\
+🌗 Supports both light and dark mode.\
+📌 Includes five key sections: Home, About, Skills, Projects, and Contact.\
 
 Feel free to explore and contribute! 🎨👨‍💻
 

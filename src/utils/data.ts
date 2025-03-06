@@ -2,46 +2,61 @@ import { About, Project, Skill } from "../App.props"
 import { githubProfile } from "./constants"
 
 export const skillData: Skill[] = [
+  // Programming languages
+  { name: "PHP", imgURL: "/assets/skills/icons_php.svg" },
+  { name: "Java", imgURL: "/assets/skills/icons_java.svg" },
+  { name: "JavaScript", imgURL: "/assets/skills/icons_js.svg" },
+  { name: "TypeScript", imgURL: "/assets/skills/icons_typescript.svg" },
+  { name: "Dart", imgURL: "/assets/skills/icons_dart.svg" },
+  // Databases
+  { name: "MySQL", imgURL: "/assets/skills/icons_mysql.svg" },
+  { name: "MongoDB", imgURL: "/assets/skills/icons_mongodb.svg" },
+  // Frameworks and libraries
+  { name: "Laravel", imgURL: "/assets/skills/icons_laravel.svg" },
+  { name: "Zend Framework", imgURL: "/assets/skills/icons_zendframework.svg" },
   { name: "React", imgURL: "/assets/skills/logos_react.svg" },
-  { name: "Next.js", imgURL: "/assets/skills/logo_next.svg" },
-  { name: "Vue", imgURL: "/assets/skills/vuedotjs-color.svg" },
-  { name: "Typescript", imgURL: "/assets/skills/icons-typescript.svg" },
-  { name: "Redux", imgURL: "/assets/skills/redux-color.svg" },
-  { name: "React Query", imgURL: "/assets/skills/react-query.svg" },
-  { name: "Material UI", imgURL: "/assets/skills/logo_mui.svg" },
-  { name: "Bootstrap", imgURL: "/assets/skills/logos_bootstrap.svg" },
-  { name: "Git", imgURL: "/assets/skills/logos_git.svg" },
+  { name: "Flutter", imgURL: "/assets/skills/icons_flutter.svg" },
+  // CMS and platforms
+  { name: "WordPress", imgURL: "/assets/skills/icons_wordpress.svg" },
+  { name: "Magento", imgURL: "/assets/skills/icons_magento.svg" },
+  // Web technologies
   { name: "HTML", imgURL: "/assets/skills/icons_html.svg" },
   { name: "CSS", imgURL: "/assets/skills/icons_css.svg" },
-  { name: "Javascript", imgURL: "/assets/skills/icons_js.svg" },
+  { name: "Bootstrap", imgURL: "/assets/skills/logos_bootstrap.svg" },
+  { name: "jQuery", imgURL: "/assets/skills/icons_jquery.svg" },
+  // Version control
+  { name: "Git", imgURL: "/assets/skills/icons_git.svg" }
 ]
 
-export const projectData: Project[] = [
+export const projectData = [
   {
-    name: "E-Commerce App",
+    name: "Persei Vivarium",
     description:
-      "It is an e-commerce web application made using Next.js, Material UI and Redux Toolkit. Customers can browse products, add items to the cart, adjust quantities, remove products, apply coupon codes, place orders, and view order history.",
-    projectURL: "",
-    githubURL: `${githubProfile}`,
+      "Plataforma para la gestión de pacientes en hospitales, diseñada para manejar un alto volumen de datos. Trabajando en la optimización del rendimiento, resolución de problemas y desarrollo de nuevas funcionalidades, además de colaborar en la integración de servicios externos como exportación de informes, notificaciones, recordatorios, etc.",
+    projectURL: "https://perseivivarium.com/",
+    githubURL: "",
     imgURL: "/assets/ecommerce-app.png",
+    languages: ["PHP", "ZF2", "jQuery", "JavaScript", "AWS"],
   },
   {
-    name: "Pokédex",
+    name: "Eurocongres",
     description:
-      "A pokedex website that allows users to search and view information about various Pokémon characters. A fuzzy search feature is present on the home page. User can view more details by clicking on the particular pokémon.",
-    projectURL: "",
-    githubURL: `${githubProfile}/my-pokedex`,
+      "Plataforma para la gestión integral de congresos. Mi trabajo se ha centrado en el desarrollo y mejora de funcionalidades, permitiendo la organización de múltiples congresos dentro de un mismo sistema.He trabajado en la integración de pasarelas de pago, el desarrollo de un panel administrativo y la optimización del sistema, utilizando un enfoque full-stack.",
+    projectURL: "https://www.eurocongres.es/",
+    githubURL: "",
     imgURL: "/assets/pokedex.png",
+    languages: ["Laravel", "React", "PHP", "JavaScript"],
   },
   {
-    name: "Pizzeria",
+    name: "Isbue",
     description:
-      "Pizzeria is a MEAN Stack web application, where users order pizza online. Users can choose from the existing menu and order pizzas, also they can also customize their pizza by choosing ingredients.",
+      "Aplicación multiplataforma para la gestión empresarial, desarrollada en Flutter para Android, iOS y Web en un corto período de tiempo junto con otro desarrollador. Esta herramienta, enfocada en la eficiencia y facilidad de uso para empresas, integra funcionalidades clave como facturación, contabilidad, gestión de proyectos, control horario, sistema TPV, etc.",
     projectURL: "",
-    githubURL: `${githubProfile}/Pizzeria`,
+    githubURL: "",
     imgURL: "/assets/pizzeria.jpg",
+    languages: ["Flutter", "Dart", "Firebase"],
   },
-]
+];
 
 export const experience = (
   (new Date().getTime() - new Date("2020-12-04").getTime()) /

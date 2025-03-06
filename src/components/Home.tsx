@@ -48,7 +48,7 @@ const Home = ({ secHeight, navID }: CommonProps) => {
                 Daniel Simarro
               </Typography>
               <Typography variant="h3" color={"text.secondary"}>
-                I'm a Front End Developer
+                I'm a Full Stack Developer
               </Typography>
               <Button
                 size="large"

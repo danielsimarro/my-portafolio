@@ -1,16 +1,18 @@
-import { CommonProps } from "../App.props"
-import CardActions from "@mui/material/CardActions"
-import CardContent from "@mui/material/CardContent"
-import Button from "@mui/material/Button"
-import Grid from "@mui/material/Grid"
-import Typography from "@mui/material/Typography"
-import { projectData } from "../utils/data"
-import GitHubIcon from "@mui/icons-material/GitHub"
-import OpenInNewIcon from "@mui/icons-material/OpenInNew"
-import { BlueSpan } from "../styles/styledComponents"
-import MotionCard from "../motion/MotionCard"
-import { Variants, m } from "framer-motion"
-import Box from "@mui/material/Box"
+import { CommonProps } from "../App.props";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import { projectData } from "../utils/data";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { BlueSpan } from "../styles/styledComponents";
+import MotionCard from "../motion/MotionCard";
+import { Variants, m } from "framer-motion";
+import Box from "@mui/material/Box";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 
 const Projects = ({ secHeight, navID }: CommonProps) => {
   let imgVariants: Variants = {
@@ -21,14 +23,14 @@ const Projects = ({ secHeight, navID }: CommonProps) => {
       rotate: [0, 10, 0],
       transition: { type: "spring" },
     },
-  }
+  };
   let textVariants: Variants = {
     initial: { y: 100, opacity: 0 },
     whileInView: {
       y: 0,
       opacity: 1,
     },
-  }
+  };
 
   return (
     <section id={navID}>
@@ -48,7 +50,7 @@ const Projects = ({ secHeight, navID }: CommonProps) => {
         </Grid>
         <Grid item container spacing={5}>
           {projectData?.map(
-            ({ name, description, githubURL, projectURL, imgURL }, i) => (
+            ({ name, description, githubURL, projectURL, imgURL, languages }, i) => (
               <Grid item key={name} xs={12} sm={6} md={4}>
                 <MotionCard
                   initial="initial"
@@ -59,16 +61,19 @@ const Projects = ({ secHeight, navID }: CommonProps) => {
                     display: "flex",
                     height: 1,
                     flexDirection: "column",
+                    boxShadow: 3,
+                    borderRadius: 3,
+                    overflow: "hidden",
                     "&:hover": {
-                      boxShadow: (theme) =>
-                        `0px 0px 8px 8px ${theme.palette.primary.main}`,
+                      boxShadow: (theme) => `0px 0px 12px 6px ${theme.palette.primary.main}`,
                       transform: "scale(1.05)",
+                      transition: "transform 0.3s ease-in-out",
                     },
                   }}
                 >
                   <Box
                     component={m.img}
-                    sx={{ width: 1, aspectRatio: "2.2" }}
+                    sx={{ width: 1, aspectRatio: "2.2", objectFit: "cover", height: 225 }}
                     title={name}
                     alt={name}
                     src={imgURL}
@@ -91,8 +96,28 @@ const Projects = ({ secHeight, navID }: CommonProps) => {
                     >
                       {description}
                     </Typography>
+                    <Stack
+                      direction="row"
+                      gap={1} // Aumenta el espaciado entre los elementos
+                      mt={1}
+                      flexWrap="wrap"
+                      justifyContent="center" // Centra los elementos horizontalmente
+                      alignItems="center" // Asegura que los elementos estén alineados verticalmente
+                    >
+                      {languages?.map((lang) => (
+                        <Chip
+                          key={lang}
+                          label={lang}
+                          variant="outlined"
+                          color="primary"
+                          size="small"
+                          sx={{ mt: 1 }}
+                        />
+                      ))}
+                    </Stack>
+
                   </CardContent>
-                  <CardActions sx={{ justifyContent: "space-evenly" }}>
+                  <CardActions sx={{ justifyContent: "space-evenly", p: 2 }}>
                     <Button
                       disabled={!Boolean(projectURL)}
                       href={projectURL}
