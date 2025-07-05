@@ -45,7 +45,7 @@ const Projects = ({ secHeight, navID }: CommonProps) => {
       >
         <Grid item xs={12} py={3}>
           <Typography variant="h4" textAlign={"center"}>
-            Personal <BlueSpan>Projects</BlueSpan>
+          <BlueSpan>Projects</BlueSpan> Showcase
           </Typography>
         </Grid>
         <Grid item container spacing={5}>
@@ -73,7 +73,7 @@ const Projects = ({ secHeight, navID }: CommonProps) => {
                 >
                   <Box
                     component={m.img}
-                    sx={{ width: 1, aspectRatio: "2.2", objectFit: "cover", height: 225 }}
+                    sx={{ width: 1, aspectRatio: "2.2", objectFit: "cover", height: 250 }}
                     title={name}
                     alt={name}
                     src={imgURL}
@@ -126,9 +126,9 @@ const Projects = ({ secHeight, navID }: CommonProps) => {
                       color="primary"
                       startIcon={<OpenInNewIcon />}
                     >
-                      Live Preview
+                      View Project
                     </Button>
-                    <Button
+                    {/*<Button
                       href={githubURL}
                       target="_blank"
                       rel="noopener"
@@ -136,7 +136,7 @@ const Projects = ({ secHeight, navID }: CommonProps) => {
                       startIcon={<GitHubIcon />}
                     >
                       View Code
-                    </Button>
+                    </Button>*/}
                   </CardActions>
                 </MotionCard>
               </Grid>

@@ -32,28 +32,37 @@ export const projectData = [
   {
     name: "Persei Vivarium",
     description:
-      "Plataforma para la gestión de pacientes en hospitales, diseñada para manejar un alto volumen de datos. Trabajando en la optimización del rendimiento, resolución de problemas y desarrollo de nuevas funcionalidades, además de colaborar en la integración de servicios externos como exportación de informes, notificaciones, recordatorios, etc.",
+      "Platform for patient management in hospitals, designed to handle a high volume of data.\n"
+      + "Working on performance optimization, problem resolution, and the development of new features,\n"
+      + "as well as collaborating in the integration of external services such as report export, notifications, reminders, etc.",
     projectURL: "https://perseivivarium.com/",
     githubURL: "",
-    imgURL: "/assets/ecommerce-app.png",
+    imgURL: "/assets/perseivivarium.png",
     languages: ["PHP", "ZF2", "jQuery", "JavaScript", "AWS"],
   },
   {
     name: "Eurocongres",
     description:
-      "Plataforma para la gestión integral de congresos. Mi trabajo se ha centrado en el desarrollo y mejora de funcionalidades, permitiendo la organización de múltiples congresos dentro de un mismo sistema.He trabajado en la integración de pasarelas de pago, el desarrollo de un panel administrativo y la optimización del sistema, utilizando un enfoque full-stack.",
+      "Comprehensive congress management platform.\n"
+      + "My work has focused on the development and improvement of functionalities, allowing the organization\n"
+      + "of multiple congresses within the same system.\n"
+      + "I have worked on the integration of payment gateways, the development of an administrative panel,\n"
+      + "and the optimization of the system, using a full-stack approach.",
     projectURL: "https://www.eurocongres.es/",
     githubURL: "",
-    imgURL: "/assets/pokedex.png",
+    imgURL: "/assets/eurocongres.png",
     languages: ["Laravel", "React", "PHP", "JavaScript"],
   },
   {
     name: "Isbue",
     description:
-      "Aplicación multiplataforma para la gestión empresarial, desarrollada en Flutter para Android, iOS y Web en un corto período de tiempo junto con otro desarrollador. Esta herramienta, enfocada en la eficiencia y facilidad de uso para empresas, integra funcionalidades clave como facturación, contabilidad, gestión de proyectos, control horario, sistema TPV, etc.",
-    projectURL: "",
+      "Multi-platform business management application, developed in Flutter for Android, iOS, and Web\n"
+      + "in a short period of time together with another developer.\n"
+      + "This tool, focused on efficiency and ease of use for businesses, integrates key functionalities such as\n"
+      + "billing, accounting, project management, time tracking, POS system, etc.",
+    projectURL: "https://www.isbue.io/",
     githubURL: "",
-    imgURL: "/assets/pizzeria.jpg",
+    imgURL: "/assets/isbue.png",
     languages: ["Flutter", "Dart", "Firebase"],
   },
 ];
