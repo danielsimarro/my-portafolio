@@ -12,8 +12,6 @@ import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
 import Button from "@mui/material/Button"
 import Chip from "@mui/material/Chip"
-import Avatar from "@mui/material/Avatar"
-import WorkIcon from '@mui/icons-material/Work'
 import MotionCard from "../motion/MotionCard"
 import { m, Variants } from "framer-motion"
 import { useTheme } from "@mui/material/styles"
@@ -64,7 +62,7 @@ const Experience = ({ secHeight, navID }: CommonProps) => {
               <VerticalTimelineElement
                 key={item.id}
                 date={`${item.start ?? ""} - ${item.end ?? ""}`}
-                icon={icons[item.icon]}
+                icon={icons[item.icon as keyof typeof icons]}
                 contentStyle={{ background: 'transparent', boxShadow: 'none', padding: 0 }}
                 contentArrowStyle={{ borderRight: `7px solid ${theme.palette.primary.main}` }}
                 iconStyle={{ background: theme.palette.primary.main, color: '#fff' }}
