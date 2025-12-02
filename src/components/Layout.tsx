@@ -21,6 +21,7 @@ import { useDimensions } from "../hooks/useDimentions"
 import Home from "./Home"
 import Skills from "./Skills"
 import Projects from "./Projects"
+import Experience from "./Experience"
 import Contact from "./Contact"
 import About from "./about/About"
 import ScrollToTop from "../motion/ScrollToTop"
@@ -187,7 +188,8 @@ const Layout = () => {
           <About secHeight={secHeight} navID={navItems[1]} />
           <Skills secHeight={secHeight} navID={navItems[2]} />
           <Projects secHeight={secHeight} navID={navItems[3]} />
-          <Contact secHeight={secHeight} navID={navItems[4]} />
+          <Experience secHeight={secHeight} navID={navItems[4]} />
+          <Contact secHeight={secHeight} navID={navItems[5]} />
           <ScrollToTop>
             <Fab
               size="medium"

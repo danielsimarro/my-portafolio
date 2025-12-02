@@ -19,47 +19,54 @@ const AboutMe = () => {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs={12} md={8}>
           <Typography variant="body1" paragraph>
-            I am a <b>passionate Software Developer</b> with over a year of experience in the industry.
+            I’m a <b>Full Stack Software Engineer</b> with over <b>3 years of experience</b>, 
+            building and improving digital products across <b>healthcare</b>, 
+            <b>enterprise management</b> and <b>large-scale event platforms</b>.
           </Typography>
 
           <Typography variant="body1" paragraph>
-            Throughout my career, I have worked with a diverse set of technologies, specializing in:
+            Throughout my journey, I’ve <b>modernised legacy systems</b> (PHP 5.6 → PHP 8), 
+            developed <b>scalable APIs</b>, built <b>web and mobile apps</b>, and delivered 
+            features used daily by hundreds of professionals.
           </Typography>
 
           <ul>
             <li>
               <Typography variant="body1">
-                <b>Backend development</b> with <b>PHP, Laravel, and Zend Framework 2</b>.
+                <b>Backend & APIs:</b> PHP, Laravel, Zend Framework 2, Node.js, REST, MVC, JWT.
               </Typography>
             </li>
             <li>
               <Typography variant="body1">
-                <b>Frontend development</b> using <b>React and JavaScript</b>.
+                <b>Frontend & Mobile:</b> React, JavaScript, Flutter, jQuery.
               </Typography>
             </li>
             <li>
               <Typography variant="body1">
-                <b>Database management</b> with <b>MySQL and MariaDB</b>.
+                <b>Databases:</b> MySQL, MariaDB, query optimisation and schema design.
               </Typography>
             </li>
             <li>
               <Typography variant="body1">
-                <b>Mobile application development</b> in <b>Flutter</b>, including <b>enterprise management software</b>.
+                <b>Cloud & DevOps:</b> Git, Docker, Linux, deployments, AWS contributions.
               </Typography>
             </li>
             <li>
               <Typography variant="body1">
-                <b>Version control</b> with <b>Git</b> and deploying applications to production environments.
+                <b>Digital transformation:</b> improving workflows and modernising platforms 
+                used daily by healthcare and enterprise clients.
               </Typography>
             </li>
           </ul>
 
           <Typography variant="body1" paragraph>
-            I thrive on <b>learning new technologies</b> and staying up-to-date with modern development practices.
+            I love <b>working closely with teams</b>, contributing my best to every project and 
+            creating <b>simple, scalable and meaningful solutions</b>.
           </Typography>
 
           <Typography variant="body1">
-            <b>Collaboration</b> is key to success, and I enjoy <b>working in a team</b> to create <b>efficient and innovative solutions</b>.
+            Always learning, always improving — and always building things that make a real 
+            impact on users and companies.
           </Typography>
         </Grid>
         

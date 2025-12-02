@@ -48,7 +48,7 @@ const Home = ({ secHeight, navID }: CommonProps) => {
                 Daniel Simarro
               </Typography>
               <Typography variant="h3" color={"text.secondary"}>
-                I'm a Full Stack Developer
+                I'm a Full Stack Software Engineer
               </Typography>
               <Button
                 size="large"
@@ -64,7 +64,7 @@ const Home = ({ secHeight, navID }: CommonProps) => {
                     backgroundPosition: "right center",
                   },
                 }}
-                href={"#" + navItems[4]}
+                href={"#" + navItems[5]}
               >
                 Contact Me
               </Button>
