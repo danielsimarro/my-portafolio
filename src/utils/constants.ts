@@ -5,3 +5,4 @@ export const linkedInProfile = "https://www.linkedin.com/in/daniel-simarro-reiga
 export const emailID = "danisimarroreigada@gmail.com"
 export const myAddress = "Marbella, Andalucía, Spain"
 export const myName = "Daniel Simarro Reigada"
+export const cvURL = "/CV_Daniel_Simarro.pdf"

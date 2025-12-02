@@ -12,6 +12,7 @@ import Footer from "./Footer"
 import { Variants, m } from "framer-motion"
 import ListItemButton from "@mui/material/ListItemButton"
 import List from "@mui/material/List"
+import DownloadIcon from "@mui/icons-material/Download"
 
 const Contact = ({ secHeight, navID }: CommonProps) => {
   let variants: Variants = {
@@ -108,6 +109,30 @@ const Contact = ({ secHeight, navID }: CommonProps) => {
                 <ListItemText
                   primaryTypographyProps={{ pl: 2, variant: "h6" }}
                   primary="Connect on LinkedIn"
+                />
+              </ListItemButton>
+              <ListItemButton
+                component={m.a}
+                variants={variants}
+                href="/CV_Daniel_Simarro.pdf"
+                download
+                sx={{
+                  border: 3,
+                  borderRadius: 2,
+                  borderColor: "transparent",
+                  "&:hover": {
+                    borderColor: "primary.main",
+                  },
+                }}
+              >
+                <ListItemAvatar>
+                  <CustomAvatar>
+                    <DownloadIcon fontSize="large" />
+                  </CustomAvatar>
+                </ListItemAvatar>
+                <ListItemText
+                  primaryTypographyProps={{ pl: 2, variant: "h6" }}
+                  primary="Download CV"
                 />
               </ListItemButton>
               <ListItemButton

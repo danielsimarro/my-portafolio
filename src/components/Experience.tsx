@@ -19,6 +19,20 @@ import { m, Variants } from "framer-motion"
 import { useTheme } from "@mui/material/styles"
 import { experienceData } from "../utils/data"
 import { BlueSpan } from "../styles/styledComponents"
+import CodeIcon from '@mui/icons-material/Code';
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone"
+import CelebrationIcon from "@mui/icons-material/Celebration"
+import LaptopIcon from '@mui/icons-material/Laptop';
+import RestaurantIcon from "@mui/icons-material/Restaurant"
+
+
+const icons = {
+  code: <CodeIcon />,
+  phone: <PhoneIphoneIcon />,
+  event: <CelebrationIcon />,
+  laptop: <LaptopIcon />,
+  restaurant: <RestaurantIcon />,
+}
 
 const Experience = ({ secHeight, navID }: CommonProps) => {
   const theme = useTheme()
@@ -28,9 +42,9 @@ const Experience = ({ secHeight, navID }: CommonProps) => {
         <Typography variant="h4" textAlign="center" mb={4}>
           <BlueSpan>Experience</BlueSpan> Showcase
         </Typography>
-    <VerticalTimeline lineColor={theme.palette.primary.main}>
+        <VerticalTimeline {...({ lineColor: theme.palette.primary.main } as any)}>
           {(() => {
-      // theme available from outer scope
+            // theme available from outer scope
 
             const imgVariants: Variants = {
               initial: { x: -100, opacity: 0 },
@@ -50,7 +64,7 @@ const Experience = ({ secHeight, navID }: CommonProps) => {
               <VerticalTimelineElement
                 key={item.id}
                 date={`${item.start ?? ""} - ${item.end ?? ""}`}
-                icon={<WorkIcon />}
+                icon={icons[item.icon]}
                 contentStyle={{ background: 'transparent', boxShadow: 'none', padding: 0 }}
                 contentArrowStyle={{ borderRight: `7px solid ${theme.palette.primary.main}` }}
                 iconStyle={{ background: theme.palette.primary.main, color: '#fff' }}
@@ -74,15 +88,27 @@ const Experience = ({ secHeight, navID }: CommonProps) => {
                   }}
                 >
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography component={m.h6} variants={textVariants} gutterBottom variant="h6" sx={{ color: '#fff' }}>
+                    <Typography
+                      component={m.h6}
+                      variants={textVariants}
+                      gutterBottom
+                      variant="h6"
+                      sx={{ color: theme.palette.text.primary }}
+                    >
                       {item.role}
                     </Typography>
-                    <Typography component={m.p} variants={textVariants} variant="body2" sx={{ color: '#fff' }}>
-                      {item.company} {item.location ? `· ${item.location}` : ''}
+
+                    <Typography
+                      component={m.p}
+                      variants={textVariants}
+                      variant="body2"
+                      sx={{ color: theme.palette.text.primary }}
+                    >
+                      {item.company} {item.location ? `· ${item.location}` : ""}
                     </Typography>
 
                     {item.description && (
-                      <Typography mt={1} sx={{ color: '#fff' }}>
+                      <Typography mt={1} sx={{ color: theme.palette.text.primary }}>
                         {item.description}
                       </Typography>
                     )}
@@ -90,7 +116,12 @@ const Experience = ({ secHeight, navID }: CommonProps) => {
                     {item.bullets && (
                       <Box component="ul" sx={{ pl: 2, mt: 1 }}>
                         {item.bullets.map((b, i) => (
-                          <li key={i} style={{ color: '#fff', marginBottom: 6 }}>{b}</li>
+                          <li
+                            key={i}
+                            style={{ color: theme.palette.text.primary, marginBottom: 6 }}
+                          >
+                            {b}
+                          </li>
                         ))}
                       </Box>
                     )}
@@ -98,13 +129,20 @@ const Experience = ({ secHeight, navID }: CommonProps) => {
                     {item.skills && (
                       <Stack direction="row" gap={1} mt={1} flexWrap="wrap">
                         {item.skills.map((s) => (
-                          <Chip key={s} label={s} variant="outlined" color="primary" size="small" sx={{ mt: 1 }} />
+                          <Chip
+                            key={s}
+                            label={s}
+                            variant="outlined"
+                            color="primary"
+                            size="small"
+                            sx={{ mt: 1 }}
+                          />
                         ))}
                       </Stack>
                     )}
                   </CardContent>
                   <CardActions sx={{ justifyContent: 'space-between', p: 2 }}>
-                    <Typography variant="caption" sx={{ color: '#fff' }}>
+                    <Typography variant="caption" sx={{ color: theme.palette.text.secondary }}>
                       {item.employmentType ?? ''} {item.duration ? `· ${item.duration}` : ''}
                     </Typography>
                     {item.remote && (
